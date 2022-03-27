@@ -10,55 +10,60 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Document</title>
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
       <div class="weather-app">
         <form class="search-form" id="search-form">
           <div class="row">
-            <div class="col-9 typecity">
+            <div class="col-6">
               <input
-                type="text"
+                type="search"
                 placeholder="Type a city"
                 class="form-control shadow-sm"
                 id="city-input"
               />
             </div>
-            <div class="col-3 searchBtn-primary">
-              <input type="submit" value="Search" class="btn btn-primary" />
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm w-100"
+              />
+            </div>
+            <div class="col-3">
+              <button
+                class="form-control btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
             </div>
           </div>
         </form>
-        <h1 id="city">
-          Sydney NSW, Australia.
-        </h1>
+        <h1 id="city"></h1>
         <ul>
           <li id="date"></li>
-          <li class="dayTime">Partly Cloudy</li>
+          <li class="dayTime" id="description"></li>
         </ul>
         <div class="row">
           <div class="col-6">
+            ⛅
             <span class="temperature" id="temperature">
-              ⛅19
             </span>
             <span class="units">
-             <a href="#" id="celsius-link"> &deg;C</a> | 
-             <a href="#" id="fahrenheit-link">&deg F</a>;
+              &deg;C
             </span>
           </div>
           <div class="col-6">
             <ul>
               <li class="measurements">
-                Precipitation:0%
+                Humidity:<span id="Humidity"></span>%
               </li>
-              <li class="measurements">
-                Humidity:77%
-              </li>
-              <li class="measurements">
-                Wind:8km/hr
-              </li>
+              <li class="measurements">Wind:<span id="Wind"></span>km/hr</li>
             </ul>
           </div>
         </div>
@@ -68,4 +73,3 @@
     <script src="src/index.js"></script>
   </body>
 </html>
-
