@@ -90,6 +90,7 @@ ul {
 .temperature {
   font-size: 64px;
   font-weight: 100;
+  margin-right: -4px;
 }
 .units {
   position: relative;
@@ -122,4 +123,19 @@ ul {
 }
 .active:hover{
   text-decoration: none;
+}
+.weather-foreast{
+  margin-top: 20px;
+  text-align: center;
+}
+.weather-forecast-date{
+  color: crimson;
+  font-size: 16px;
+}
+.weather-forecast-temperatures{
+  font-size: 13px;
+}
+.weather-forecast-temperatures-min{
+  opacity: 0.9;
+  color: coral;
 }
