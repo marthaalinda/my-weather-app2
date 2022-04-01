@@ -87,12 +87,14 @@ ul {
   line-height: 1;
   list-style: none;
 }
-.temp {
+.temperature {
   font-size: 64px;
+  font-weight: 100;
 }
 .units {
   position: relative;
-
+  top: -32px;
+  font-size: 17px;
 }
 .col-6 {
   flex: 0 0 50%;
@@ -108,4 +110,16 @@ ul {
 .link{
   text-align: center;
   display:block;
+}
+.overview{
+  margin-bottom: -6px;
+}
+.float-left{
+  margin-top: -40px;
+}
+.active{
+  cursor: default;
+}
+.active:hover{
+  text-decoration: none;
 }
