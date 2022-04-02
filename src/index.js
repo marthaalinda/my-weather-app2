@@ -65,6 +65,7 @@ function getForecast(coordinates){
 
 function displayweatherCondition(response) {
   console.log(response.data);
+  celsiusTemperature=response.data.main.temp;
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
    celsiusTemperature
@@ -77,7 +78,7 @@ function displayweatherCondition(response) {
     response.data.weather[0].main;
   let iconElement=document.querySelector("#icon");
   iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  celsiusTemperature=response.data.main.temp;
+  
 
   getForecast(response.data.coord);
 }
