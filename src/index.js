@@ -141,6 +141,6 @@ function displayCelsiusTemperature(event){
   fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
   let celsiusLink=document.querySelector("#celsius-link");
-  fahrenheitLink.addEventListener("click", displayCelsiusTemperature);
+  celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Yamoussoukro");
