@@ -56,15 +56,12 @@ function displayForecast(response){
 
 
 function getForecast(coordinates){
-  console.log(coordinates);
   let apiKey = "377d72ad7d3532b18d9e46b78a688388";
   let apiUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 
 function displayweatherCondition(response) {
-  console.log(response.data);
   celsiusTemperature=response.data.main.temp;
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
